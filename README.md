@@ -11,9 +11,8 @@ Hint and pull are always appreciate
 
 ```
 $ npm install
-$ grunt dist
 ```
-After that navigate to dist folder and open index.html
+Navigate to dist folder and open index.html
 
 ## Usage
 
@@ -25,11 +24,11 @@ Now run in two different cmd/terminal
 ```
 $ grunt
 ```
-Starts a server on port 9000 and starts looking for changes in /dev folder
+Starts looking for changes in /dev folder and compile *.scss files
 ```
-$ grunt dev
+$ npm start
 ```
-Starts a scss Compiler who's looking for change on dev/*.scss files
+Starts local http-server
 
 ## Where to get help
 
@@ -37,5 +36,5 @@ Starts a scss Compiler who's looking for change on dev/*.scss files
 
 ## Next Steps
 
-* Clean javascript function
-* Put some enviorment variables in scss file
+* remove gulp devDependencies and run all tasks with node, maybe with webpack
+* npm tasks configuration for dev and prod mode ( <- help much APPRECIATED )

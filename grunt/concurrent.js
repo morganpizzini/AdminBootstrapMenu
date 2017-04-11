@@ -4,8 +4,6 @@ module.exports = {
                   },
                   dev: {
                     tasks: ['watch:compass:dev']
-                  },
-                  update: {
-                    tasks: ['watch:livereload','watch:compass:dev']
+                    //tasks: ['watch:livereload','watch:compass:dev']
                   }
                 }

@@ -1,35 +1,86 @@
-/*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-/* line 6, index.scss */
+/*-------------------------------*/
+/*          Page variables       */
+/*-------------------------------*/
+/*-------------------------------*/
+/*          Page styles          */
+/*-------------------------------*/
+/* line 5, ../scss/index.scss */
+.bg-color-black {
+  background-color: #000000;
+}
+
+/* line 8, ../scss/index.scss */
+.bg-color-red {
+  background-color: #ec1b5a;
+}
+
+/* line 11, ../scss/index.scss */
+.bg-color-lblue {
+  background-color: #79aefe;
+}
+
+/* line 14, ../scss/index.scss */
+.bg-color-blue {
+  background-color: #314190;
+}
+
+/* line 17, ../scss/index.scss */
+.bg-color-green {
+  background-color: #279636;
+}
+
+/* line 20, ../scss/index.scss */
+.bg-color-purple {
+  background-color: #7d5d81;
+}
+
+/* line 23, ../scss/index.scss */
+.bg-color-yellow {
+  background-color: #ead24c;
+}
+
+/* line 26, ../scss/index.scss */
+.bg-color- {
+  background-color: #2d2366;
+}
+
+/* line 29, ../scss/index.scss */
+.bg-color- {
+  background-color: #35acdf;
+}
+
+/* line 34, ../scss/index.scss */
 body {
   position: relative;
   overflow-x: hidden;
   background-color: #ccc;
 }
 
-/* line 11, index.scss */
+/* line 39, ../scss/index.scss */
 body,
 html {
   height: 100%;
 }
 
-/* line 14, index.scss */
+/* line 42, ../scss/index.scss */
+.no-margin {
+  margin: 0;
+}
+
+/* line 46, ../scss/index.scss */
 .navbar {
   z-index: 999;
   border-radius: 0;
 }
 
-/* line 19, index.scss */
+/* line 51, ../scss/index.scss */
 .navbar-default, #sidebar-wrapper {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
 
 /* Toggle Styles */
-/* line 25, index.scss */
+/* line 57, ../scss/index.scss */
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -38,22 +89,30 @@ html {
   transition: all 0.5s ease;
   overflow: hidden;
 }
-
-/* line 34, index.scss */
+/* line 64, ../scss/index.scss */
 #wrapper.toggled {
-  padding-left: 250px;
+  padding-left: 200px;
   overflow: hidden;
 }
+/* line 67, ../scss/index.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 200px;
+}
+/* line 70, ../scss/index.scss */
+#wrapper.toggled #page-content-wrapper {
+  position: relative;
+  margin-right: 0px;
+}
 
-/* line 39, index.scss */
+/* line 77, ../scss/index.scss */
 #sidebar-wrapper {
   z-index: 1000;
   margin-top: -1px;
   position: absolute;
-  left: 250px;
+  left: 200px;
   width: 0;
   height: 100%;
-  margin-left: -250px;
+  margin-left: -200px;
   overflow-y: auto;
   overflow-x: hidden;
   border-right: 1px solid transparent;
@@ -63,12 +122,12 @@ html {
   transition: all 0.5s ease;
 }
 
-/* line 55, index.scss */
-#wrapper.toggled #sidebar-wrapper {
-  width: 250px;
+/* line 93, ../scss/index.scss */
+#sidebar-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
-/* line 59, index.scss */
+/* line 96, ../scss/index.scss */
 #page-content-wrapper {
   position: absolute;
   padding: 15px;
@@ -76,43 +135,44 @@ html {
   overflow-x: hidden;
 }
 
-/* line 65, index.scss */
+/* line 102, ../scss/index.scss */
 .xyz {
   min-width: 360px;
 }
 
-/* line 68, index.scss */
-#wrapper.toggled #page-content-wrapper {
-  position: relative;
-  margin-right: 0px;
-}
-
-/* line 72, index.scss */
+/* line 106, ../scss/index.scss */
 .fixed-brand {
   width: auto;
 }
 
 /* Sidebar Styles */
-/* line 77, index.scss */
+/* line 110, ../scss/index.scss */
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 250px;
+  width: 200px;
   margin: 0;
   padding: 0;
   list-style: none;
-  /*margin-top: 2px;*/
 }
-
-/* line 87, index.scss */
+/* line 117, ../scss/index.scss */
 .sidebar-nav li {
   position: relative;
   text-indent: 15px;
   line-height: 40px;
 }
-
-/* Sidebar Styles */
-/* line 95, index.scss */
+/* line 121, ../scss/index.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  color: #777;
+}
+/* line 126, ../scss/index.scss */
+.sidebar-nav li.open a .caret {
+  border-left-color: transparent;
+  border-top-color: #000;
+}
+/* line 130, ../scss/index.scss */
 .sidebar-nav li:before {
   content: '';
   position: absolute;
@@ -128,64 +188,57 @@ html {
   transition: width .2s ease-in;
 }
 
-/* line 110, index.scss */
+/* Sidebar Styles */
+/* line 150, ../scss/index.scss */
 .sidebar-nav li:first-child a {
   /*color: #1a1a1a;*/
 }
 
-/* line 114, index.scss */
+/* line 154, ../scss/index.scss */
 .sidebar-nav > li:nth-child(2):before,
 .sidebar-nav > li:nth-child(2) li:before {
   background-color: #ec1b5a;
 }
 
-/* line 118, index.scss */
+/* line 158, ../scss/index.scss */
 .sidebar-nav > li:nth-child(3):before,
 .sidebar-nav > li:nth-child(3) li:before {
   background-color: #79aefe;
 }
 
-/* line 122, index.scss */
+/* line 162, ../scss/index.scss */
 .sidebar-nav > li:nth-child(4):before,
 .sidebar-nav > li:nth-child(4) li:before {
   background-color: #314190;
 }
 
-/* line 126, index.scss */
+/* line 166, ../scss/index.scss */
 .sidebar-nav > li:nth-child(5):before,
 .sidebar-nav > li:nth-child(5) li:before {
   background-color: #279636;
 }
 
-/* line 130, index.scss */
+/* line 170, ../scss/index.scss */
 .sidebar-nav > li:nth-child(6):before,
 .sidebar-nav > li:nth-child(6) li:before {
   background-color: #7d5d81;
 }
 
-/* line 134, index.scss */
+/* line 174, ../scss/index.scss */
 .sidebar-nav > li:nth-child(7):before,
 .sidebar-nav > li:nth-child(7) li:before {
   background-color: #ead24c;
 }
 
-/* line 138, index.scss */
-.sidebar-nav > li:nth-child(8):before,
-.sidebar-nav > li:nth-child(8) li:before {
-  background-color: #2d2366;
-}
-
-/* line 142, index.scss */
-.sidebar-nav > li:nth-child(9):before,
-.sidebar-nav > li:nth-child(9) li:before {
-  background-color: #35acdf;
-}
-
-/* line 146, index.scss */
-.sidebar-nav li:hover:before,
-.sidebar-nav li.open:hover:before,
+/* line 179, ../scss/index.scss */
 .sidebar-nav li.active:before {
   width: 10px;
+}
+
+/* line 183, ../scss/index.scss */
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before {
+  width: 200px;
   -webkit-transition: width .2s ease-in;
   -moz-transition: width .2s ease-in;
   -ms-transition: width .2s ease-in;
@@ -193,7 +246,7 @@ html {
   color: #333;
 }
 
-/* line 158, index.scss */
+/* line 194, ../scss/index.scss */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
@@ -202,21 +255,7 @@ html {
 }
 
 /* End Sidebar Styles */
-/* line 166, index.scss */
-.sidebar-nav li a {
-  display: block;
-  text-decoration: none;
-  /*color: #999999;*/
-  color: #777;
-}
-
-/*.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-    border-left: red 2px solid;
-}*/
-/* line 180, index.scss */
+/* line 202, ../scss/index.scss */
 .sidebar-nav li a:hover,
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus,
@@ -228,13 +267,7 @@ html {
   background-color: transparent;
 }
 
-/* line 190, index.scss */
-.sidebar-nav li.open a .caret {
-  border-left-color: transparent;
-  border-top-color: #000;
-}
-
-/* line 194, index.scss */
+/* line 213, ../scss/index.scss */
 .caret {
   display: inline-block;
   width: 0;
@@ -245,52 +278,60 @@ html {
   border-bottom: 5px solid transparent;
   border-top: 5px solid transparent;
   border-left-color: #000;
-  margin-top: 5px;
+  margin-top: 0px;
   margin-right: 10px;
 }
 
-/* line 207, index.scss */
-.no-margin {
-  margin: 0;
-}
-
 @media (min-width: 768px) {
-  /* line 212, index.scss */
+  /* line 229, ../scss/index.scss */
   #wrapper {
-    padding-left: 250px;
+    padding-left: 200px;
+  }
+  /* line 231, ../scss/index.scss */
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  /* line 233, ../scss/index.scss */
+  #wrapper.toggled #sidebar-wrapper {
+    width: 200px;
+  }
+  /* line 236, ../scss/index.scss */
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    padding-left: 200px;
+  }
+  /* line 244, ../scss/index.scss */
+  #wrapper.toggled-2 #sidebar-wrapper {
+    width: 50px;
+  }
+  /* line 246, ../scss/index.scss */
+  #wrapper.toggled-2 #sidebar-wrapper:hover {
+    width: 200px;
+  }
+  /* line 250, ../scss/index.scss */
+  #wrapper.toggled-2 #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    margin-left: -150px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: auto;
   }
 
-  /* line 215, index.scss */
+  /* line 262, ../scss/index.scss */
   .fixed-brand {
     width: 250px;
   }
 
-  /* line 218, index.scss */
-  #wrapper.toggled {
-    padding-left: 0;
-  }
-
-  /* line 222, index.scss */
+  /* line 266, ../scss/index.scss */
   #sidebar-wrapper {
-    width: 250px;
+    width: 200px;
   }
 
-  /* line 226, index.scss */
-  #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-  }
-
-  /* line 229, index.scss */
-  #wrapper.toggled-2 #sidebar-wrapper {
-    width: 50px;
-  }
-
-  /* line 232, index.scss */
-  #wrapper.toggled-2 #sidebar-wrapper:hover {
-    width: 250px;
-  }
-
-  /* line 237, index.scss */
+  /* line 269, ../scss/index.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
@@ -300,26 +341,7 @@ html {
     transition: all 0.5s ease;
   }
 
-  /* line 246, index.scss */
-  #wrapper.toggled #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
-    padding-left: 250px;
-  }
-
-  /* line 251, index.scss */
-  #wrapper.toggled-2 #page-content-wrapper {
-    position: relative;
-    margin-right: 0;
-    margin-left: -200px;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    width: auto;
-  }
-
-  /* line 262, index.scss */
+  /* line 277, ../scss/index.scss */
   .hamburger.navbar-toggle {
     display: none;
   }
@@ -327,12 +349,12 @@ html {
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
-/* line 272, index.scss */
+/* line 287, ../scss/index.scss */
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent;
 }
 
-/* line 276, index.scss */
+/* line 291, ../scss/index.scss */
 .hamburger {
   position: relative;
   top: 10px;
@@ -344,20 +366,15 @@ html {
   background: transparent;
   border: none;
 }
-
-/* line 288, index.scss */
+/* line 301, ../scss/index.scss */
 .hamburger.navbar-toggle {
   top: 0;
 }
-
-/* line 292, index.scss */
-.hamburger:hover,
-.hamburger:focus,
-.hamburger:active {
+/* line 304, ../scss/index.scss */
+.hamburger:hover, .hamburger:focus, .hamburger:active {
   outline: none;
 }
-
-/* line 297, index.scss */
+/* line 307, ../scss/index.scss */
 .hamburger.is-closed:before {
   content: '';
   display: block;
@@ -370,8 +387,7 @@ html {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: all .35s ease-in-out;
 }
-
-/* line 309, index.scss */
+/* line 319, ../scss/index.scss */
 .hamburger.is-closed:hover:before {
   opacity: 1;
   display: block;
@@ -379,7 +395,7 @@ html {
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 316, index.scss */
+/* line 327, ../scss/index.scss */
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom,
@@ -392,75 +408,75 @@ html {
   width: 100%;
 }
 
-/* line 327, index.scss */
+/* line 338, ../scss/index.scss */
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 332, index.scss */
+/* line 343, ../scss/index.scss */
 .hamburger.is-closed .hamb-top {
   top: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 336, index.scss */
+/* line 347, ../scss/index.scss */
 .hamburger.is-closed .hamb-middle {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 340, index.scss */
+/* line 351, ../scss/index.scss */
 .hamburger.is-closed .hamb-bottom {
   bottom: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 345, index.scss */
+/* line 356, ../scss/index.scss */
 .hamburger.is-closed:hover .hamb-top {
   top: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 349, index.scss */
+/* line 360, ../scss/index.scss */
 .hamburger.is-closed:hover .hamb-bottom {
   bottom: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 353, index.scss */
+/* line 364, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-middle,
 .hamburger.is-open .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 358, index.scss */
+/* line 369, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-bottom {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 363, index.scss */
+/* line 374, ../scss/index.scss */
 .hamburger.is-open .hamb-top {
   -webkit-transform: rotate(45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 367, index.scss */
+/* line 378, ../scss/index.scss */
 .hamburger.is-open .hamb-middle {
   display: none;
 }
 
-/* line 368, index.scss */
+/* line 379, ../scss/index.scss */
 .hamburger.is-open .hamb-bottom {
   -webkit-transform: rotate(-45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 372, index.scss */
+/* line 383, ../scss/index.scss */
 .hamburger.is-open:before {
   content: '';
   display: block;
@@ -474,7 +490,7 @@ html {
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 384, index.scss */
+/* line 395, ../scss/index.scss */
 .hamburger.is-open:hover:before {
   opacity: 1;
   display: block;
@@ -485,7 +501,7 @@ html {
 /*-------------------------------*/
 /*            Overlay            */
 /*-------------------------------*/
-/* line 395, index.scss */
+/* line 406, ../scss/index.scss */
 .overlay {
   position: fixed;
   display: none;

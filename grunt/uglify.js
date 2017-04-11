@@ -4,21 +4,9 @@ module.exports ={
                           report: 'gzip'
                       },
                       files: {
-                          'dist/index.js' : [
-                              'index.js',
+                          'dist/assets/js/index.js' : [
+                              'dev/assets/js/index.js',
                           ]
                       }
                   },
-                //   dev: {
-                //       options: {
-                //           beautify: true,
-                //           compress: false,
-                //           mangle: false
-                //       },
-                //        files: {
-                //           'dev/index.js' : [
-                //               'index.js',
-                //           ]
-                //       }
-                //   }
                 }

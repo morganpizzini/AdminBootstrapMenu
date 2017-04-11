@@ -1,8 +1,8 @@
 module.exports = {
                   dev: {
                    options: {              
-                     sassDir: ['dev'],
-                     cssDir: ['dev'],
+                     sassDir: ['dev/assets/scss'],
+                     cssDir: ['dev/assets/css'],
                      cacheDir: '/cache',
                      raw: 'preferred_syntax = :scss\n',
                      outputStyle: 'expanded',
@@ -11,8 +11,8 @@ module.exports = {
                   },
                  dist: {
                   options: {              
-                    sassDir: ['dev'],
-                     cssDir: ['dist'],
+                    sassDir: ['dev/assets/scss'],
+                     cssDir: ['dist/assets/css'],
                      cacheDir: '/cache',
                      raw: 'preferred_syntax = :scss\n',
                      outputStyle: 'compressed',
