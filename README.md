@@ -3,7 +3,7 @@
 ## Description
 
 _Admin Bootstrap Menu_ is a just "another" admin bootstrap menu..
-While i was looking for some usefull menu for an admin website i decide to merge some code snippets in 
+While i was looking for some useful menu for an admin website i decide to merge some code snippets in 
 
 Hint and pull are always appreciate
 
