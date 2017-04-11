@@ -1,7 +1,4 @@
 /*-------------------------------*/
-/*          Page variables       */
-/*-------------------------------*/
-/*-------------------------------*/
 /*          Page styles          */
 /*-------------------------------*/
 /* line 5, ../scss/index.scss */
@@ -91,12 +88,12 @@ html {
 }
 /* line 64, ../scss/index.scss */
 #wrapper.toggled {
-  padding-left: 200px;
+  padding-left: 250px;
   overflow: hidden;
 }
 /* line 67, ../scss/index.scss */
 #wrapper.toggled #sidebar-wrapper {
-  width: 200px;
+  width: 250px;
 }
 /* line 70, ../scss/index.scss */
 #wrapper.toggled #page-content-wrapper {
@@ -109,10 +106,10 @@ html {
   z-index: 1000;
   margin-top: -1px;
   position: absolute;
-  left: 200px;
+  left: 250px;
   width: 0;
   height: 100%;
-  margin-left: -200px;
+  margin-left: -250px;
   overflow-y: auto;
   overflow-x: hidden;
   border-right: 1px solid transparent;
@@ -150,7 +147,7 @@ html {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 200px;
+  width: 250px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -238,7 +235,7 @@ html {
 /* line 183, ../scss/index.scss */
 .sidebar-nav li:hover:before,
 .sidebar-nav li.open:hover:before {
-  width: 200px;
+  width: 5px;
   -webkit-transition: width .2s ease-in;
   -moz-transition: width .2s ease-in;
   -ms-transition: width .2s ease-in;
@@ -285,7 +282,7 @@ html {
 @media (min-width: 768px) {
   /* line 229, ../scss/index.scss */
   #wrapper {
-    padding-left: 200px;
+    padding-left: 250px;
   }
   /* line 231, ../scss/index.scss */
   #wrapper.toggled {
@@ -293,13 +290,13 @@ html {
   }
   /* line 233, ../scss/index.scss */
   #wrapper.toggled #sidebar-wrapper {
-    width: 200px;
+    width: 250px;
   }
   /* line 236, ../scss/index.scss */
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
-    padding-left: 200px;
+    padding-left: 250px;
   }
   /* line 244, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper {
@@ -307,13 +304,13 @@ html {
   }
   /* line 246, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper:hover {
-    width: 200px;
+    width: 250px;
   }
   /* line 250, ../scss/index.scss */
   #wrapper.toggled-2 #page-content-wrapper {
     position: relative;
     margin-right: 0;
-    margin-left: -150px;
+    margin-left: -200px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -328,7 +325,7 @@ html {
 
   /* line 266, ../scss/index.scss */
   #sidebar-wrapper {
-    width: 200px;
+    width: 250px;
   }
 
   /* line 269, ../scss/index.scss */

@@ -1,6 +1,6 @@
 module.exports = {
                   compass: {
-                   files: ['dev/*.scss'],
+                   files: ['dev/assets/scss/*.scss'],
                    tasks: ['compass:dev']
                   },
                 }
