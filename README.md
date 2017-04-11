@@ -3,7 +3,7 @@
 ## Description
 
 _Admin Bootstrap Menu_ is a just "another" admin bootstrap menu..
-While i was looking for some useful menu for an admin website i decide to merge some code snippets in 
+While i was looking for some useful menu for an admin website i decide to merge some code snippets.
 
 Hint and pull are always appreciate
 
@@ -42,3 +42,8 @@ Starts a scss Compiler who's looking for change on dev/*.scss files
 ## Where to get help
 
 * Mail me: morgan.pizzini@hotmail.com
+
+## Next Steps
+
+* Clean javascript function
+* Put some enviorment variables in scss file
