@@ -1,0 +1,500 @@
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* line 6, index.scss */
+body {
+  position: relative;
+  overflow-x: hidden;
+  background-color: #ccc;
+}
+
+/* line 11, index.scss */
+body,
+html {
+  height: 100%;
+}
+
+/* line 14, index.scss */
+.navbar {
+  z-index: 999;
+  border-radius: 0;
+}
+
+/* line 19, index.scss */
+.navbar-default, #sidebar-wrapper {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+/* Toggle Styles */
+/* line 25, index.scss */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+
+/* line 34, index.scss */
+#wrapper.toggled {
+  padding-left: 250px;
+  overflow: hidden;
+}
+
+/* line 39, index.scss */
+#sidebar-wrapper {
+  z-index: 1000;
+  margin-top: -1px;
+  position: absolute;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 1px solid transparent;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 55, index.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* line 59, index.scss */
+#page-content-wrapper {
+  position: absolute;
+  padding: 15px;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* line 65, index.scss */
+.xyz {
+  min-width: 360px;
+}
+
+/* line 68, index.scss */
+#wrapper.toggled #page-content-wrapper {
+  position: relative;
+  margin-right: 0px;
+}
+
+/* line 72, index.scss */
+.fixed-brand {
+  width: auto;
+}
+
+/* Sidebar Styles */
+/* line 77, index.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /*margin-top: 2px;*/
+}
+
+/* line 87, index.scss */
+.sidebar-nav li {
+  position: relative;
+  text-indent: 15px;
+  line-height: 40px;
+}
+
+/* Sidebar Styles */
+/* line 95, index.scss */
+.sidebar-nav li:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  height: 100%;
+  width: 3px;
+  background-color: #1c1c1c;
+  -webkit-transition: width .2s ease-in;
+  -moz-transition: width .2s ease-in;
+  -ms-transition: width .2s ease-in;
+  transition: width .2s ease-in;
+}
+
+/* line 110, index.scss */
+.sidebar-nav li:first-child a {
+  /*color: #1a1a1a;*/
+}
+
+/* line 114, index.scss */
+.sidebar-nav > li:nth-child(2):before,
+.sidebar-nav > li:nth-child(2) li:before {
+  background-color: #ec1b5a;
+}
+
+/* line 118, index.scss */
+.sidebar-nav > li:nth-child(3):before,
+.sidebar-nav > li:nth-child(3) li:before {
+  background-color: #79aefe;
+}
+
+/* line 122, index.scss */
+.sidebar-nav > li:nth-child(4):before,
+.sidebar-nav > li:nth-child(4) li:before {
+  background-color: #314190;
+}
+
+/* line 126, index.scss */
+.sidebar-nav > li:nth-child(5):before,
+.sidebar-nav > li:nth-child(5) li:before {
+  background-color: #279636;
+}
+
+/* line 130, index.scss */
+.sidebar-nav > li:nth-child(6):before,
+.sidebar-nav > li:nth-child(6) li:before {
+  background-color: #7d5d81;
+}
+
+/* line 134, index.scss */
+.sidebar-nav > li:nth-child(7):before,
+.sidebar-nav > li:nth-child(7) li:before {
+  background-color: #ead24c;
+}
+
+/* line 138, index.scss */
+.sidebar-nav > li:nth-child(8):before,
+.sidebar-nav > li:nth-child(8) li:before {
+  background-color: #2d2366;
+}
+
+/* line 142, index.scss */
+.sidebar-nav > li:nth-child(9):before,
+.sidebar-nav > li:nth-child(9) li:before {
+  background-color: #35acdf;
+}
+
+/* line 146, index.scss */
+.sidebar-nav li:hover:before,
+.sidebar-nav li.open:hover:before,
+.sidebar-nav li.active:before {
+  width: 10px;
+  -webkit-transition: width .2s ease-in;
+  -moz-transition: width .2s ease-in;
+  -ms-transition: width .2s ease-in;
+  transition: width .2s ease-in;
+  color: #333;
+}
+
+/* line 158, index.scss */
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover {
+  color: #000;
+  background-color: transparent;
+}
+
+/* End Sidebar Styles */
+/* line 166, index.scss */
+.sidebar-nav li a {
+  display: block;
+  text-decoration: none;
+  /*color: #999999;*/
+  color: #777;
+}
+
+/*.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    border-left: red 2px solid;
+}*/
+/* line 180, index.scss */
+.sidebar-nav li a:hover,
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus,
+.sidebar-nav li.open a:hover,
+.sidebar-nav li.open a:active,
+.sidebar-nav li.open a:focus {
+  color: #333;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* line 190, index.scss */
+.sidebar-nav li.open a .caret {
+  border-left-color: transparent;
+  border-top-color: #000;
+}
+
+/* line 194, index.scss */
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-left: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-top: 5px solid transparent;
+  border-left-color: #000;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+/* line 207, index.scss */
+.no-margin {
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  /* line 212, index.scss */
+  #wrapper {
+    padding-left: 250px;
+  }
+
+  /* line 215, index.scss */
+  .fixed-brand {
+    width: 250px;
+  }
+
+  /* line 218, index.scss */
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+
+  /* line 222, index.scss */
+  #sidebar-wrapper {
+    width: 250px;
+  }
+
+  /* line 226, index.scss */
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+
+  /* line 229, index.scss */
+  #wrapper.toggled-2 #sidebar-wrapper {
+    width: 50px;
+  }
+
+  /* line 232, index.scss */
+  #wrapper.toggled-2 #sidebar-wrapper:hover {
+    width: 250px;
+  }
+
+  /* line 237, index.scss */
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+
+  /* line 246, index.scss */
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    padding-left: 250px;
+  }
+
+  /* line 251, index.scss */
+  #wrapper.toggled-2 #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+    margin-left: -200px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    width: auto;
+  }
+
+  /* line 262, index.scss */
+  .hamburger.navbar-toggle {
+    display: none;
+  }
+}
+/*-------------------------------*/
+/*       Hamburger-Cross         */
+/*-------------------------------*/
+/* line 272, index.scss */
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+  background-color: transparent;
+}
+
+/* line 276, index.scss */
+.hamburger {
+  position: relative;
+  top: 10px;
+  z-index: 999;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 10px;
+  background: transparent;
+  border: none;
+}
+
+/* line 288, index.scss */
+.hamburger.navbar-toggle {
+  top: 0;
+}
+
+/* line 292, index.scss */
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:active {
+  outline: none;
+}
+
+/* line 297, index.scss */
+.hamburger.is-closed:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 309, index.scss */
+.hamburger.is-closed:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 316, index.scss */
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom,
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 100%;
+}
+
+/* line 327, index.scss */
+.hamburger.is-closed .hamb-top,
+.hamburger.is-closed .hamb-middle,
+.hamburger.is-closed .hamb-bottom {
+  background-color: #1a1a1a;
+}
+
+/* line 332, index.scss */
+.hamburger.is-closed .hamb-top {
+  top: 5px;
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 336, index.scss */
+.hamburger.is-closed .hamb-middle {
+  top: 50%;
+  margin-top: -2px;
+}
+
+/* line 340, index.scss */
+.hamburger.is-closed .hamb-bottom {
+  bottom: 5px;
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 345, index.scss */
+.hamburger.is-closed:hover .hamb-top {
+  top: 3px;
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 349, index.scss */
+.hamburger.is-closed:hover .hamb-bottom {
+  bottom: 3px;
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 353, index.scss */
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-middle,
+.hamburger.is-open .hamb-bottom {
+  background-color: #1a1a1a;
+}
+
+/* line 358, index.scss */
+.hamburger.is-open .hamb-top,
+.hamburger.is-open .hamb-bottom {
+  top: 50%;
+  margin-top: -2px;
+}
+
+/* line 363, index.scss */
+.hamburger.is-open .hamb-top {
+  -webkit-transform: rotate(45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+}
+
+/* line 367, index.scss */
+.hamburger.is-open .hamb-middle {
+  display: none;
+}
+
+/* line 368, index.scss */
+.hamburger.is-open .hamb-bottom {
+  -webkit-transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
+}
+
+/* line 372, index.scss */
+.hamburger.is-open:before {
+  content: '';
+  display: block;
+  width: 100px;
+  font-size: 14px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  opacity: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/* line 384, index.scss */
+.hamburger.is-open:hover:before {
+  opacity: 1;
+  display: block;
+  -webkit-transform: translate3d(-100px, 0, 0);
+  -webkit-transition: all .35s ease-in-out;
+}
+
+/*-------------------------------*/
+/*            Overlay            */
+/*-------------------------------*/
+/* line 395, index.scss */
+.overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(250, 250, 250, 0.8);
+  z-index: 1;
+}
