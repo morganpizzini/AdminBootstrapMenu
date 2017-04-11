@@ -7,14 +7,6 @@ While i was looking for some useful menu for an admin website i decide to merge 
 
 Hint and pull are always appreciate
 
-For example ...
-
-    example code
-    
-And this returns:
-    example return code
-    ...
-
 ## Installation
 
 ```
