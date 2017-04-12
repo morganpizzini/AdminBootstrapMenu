@@ -2,82 +2,72 @@
 /*          Page styles          */
 /*-------------------------------*/
 /* line 5, ../scss/index.scss */
-.bg-color-black {
+.bg-color-black, .sidebar-nav li.black:before {
   background-color: #000000;
 }
 
 /* line 8, ../scss/index.scss */
-.bg-color-red {
+.bg-color-red, .sidebar-nav li.red:before {
   background-color: #ec1b5a;
 }
 
 /* line 11, ../scss/index.scss */
-.bg-color-lblue {
+.bg-color-lblue, .sidebar-nav li.lblue:before {
   background-color: #79aefe;
 }
 
 /* line 14, ../scss/index.scss */
-.bg-color-blue {
+.bg-color-blue, .sidebar-nav li.blue:before {
   background-color: #314190;
 }
 
 /* line 17, ../scss/index.scss */
-.bg-color-green {
+.bg-color-green, .sidebar-nav li.green:before {
   background-color: #279636;
 }
 
 /* line 20, ../scss/index.scss */
-.bg-color-purple {
+.bg-color-purple, .sidebar-nav li.purple:before {
   background-color: #7d5d81;
 }
 
 /* line 23, ../scss/index.scss */
-.bg-color-yellow {
+.bg-color-yellow, .sidebar-nav li.yellow:before {
   background-color: #ead24c;
 }
 
-/* line 26, ../scss/index.scss */
-.bg-color- {
-  background-color: #2d2366;
-}
-
-/* line 29, ../scss/index.scss */
-.bg-color- {
-  background-color: #35acdf;
-}
-
-/* line 34, ../scss/index.scss */
+/* line 28, ../scss/index.scss */
 body {
   position: relative;
   overflow-x: hidden;
   background-color: #ccc;
 }
 
-/* line 39, ../scss/index.scss */
+/* line 33, ../scss/index.scss */
 body,
 html {
   height: 100%;
 }
 
-/* line 42, ../scss/index.scss */
+/* line 36, ../scss/index.scss */
 .no-margin {
   margin: 0;
 }
 
-/* line 46, ../scss/index.scss */
+/* line 40, ../scss/index.scss */
 .navbar {
   z-index: 999;
   border-radius: 0;
 }
 
-/* line 51, ../scss/index.scss */
+/* line 45, ../scss/index.scss */
 .navbar-default, #sidebar-wrapper {
   background-color: #f8f8f8;
   border-color: #e7e7e7;
 }
 
 /* Toggle Styles */
-/* line 57, ../scss/index.scss */
+/* line 51, ../scss/index.scss */
 #wrapper {
   padding-left: 0;
   -webkit-transition: all 0.5s ease;
@@ -86,22 +76,22 @@ html {
   transition: all 0.5s ease;
   overflow: hidden;
 }
-/* line 64, ../scss/index.scss */
+/* line 58, ../scss/index.scss */
 #wrapper.toggled {
   padding-left: 250px;
   overflow: hidden;
 }
-/* line 67, ../scss/index.scss */
+/* line 61, ../scss/index.scss */
 #wrapper.toggled #sidebar-wrapper {
   width: 250px;
 }
-/* line 70, ../scss/index.scss */
+/* line 64, ../scss/index.scss */
 #wrapper.toggled #page-content-wrapper {
   position: relative;
   margin-right: 0px;
 }
 
-/* line 77, ../scss/index.scss */
+/* line 71, ../scss/index.scss */
 #sidebar-wrapper {
   z-index: 1000;
   margin-top: -1px;
@@ -119,12 +109,12 @@ html {
   transition: all 0.5s ease;
 }
 
-/* line 93, ../scss/index.scss */
+/* line 87, ../scss/index.scss */
 #sidebar-wrapper::-webkit-scrollbar {
   display: none;
 }
 
-/* line 96, ../scss/index.scss */
+/* line 90, ../scss/index.scss */
 #page-content-wrapper {
   position: absolute;
   padding: 15px;
@@ -132,18 +122,18 @@ html {
   overflow-x: hidden;
 }
 
-/* line 102, ../scss/index.scss */
+/* line 96, ../scss/index.scss */
 .xyz {
   min-width: 360px;
 }
 
-/* line 106, ../scss/index.scss */
+/* line 100, ../scss/index.scss */
 .fixed-brand {
   width: auto;
 }
 
 /* Sidebar Styles */
-/* line 110, ../scss/index.scss */
+/* line 104, ../scss/index.scss */
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -152,24 +142,24 @@ html {
   padding: 0;
   list-style: none;
 }
-/* line 117, ../scss/index.scss */
+/* line 111, ../scss/index.scss */
 .sidebar-nav li {
   position: relative;
   text-indent: 15px;
   line-height: 40px;
 }
-/* line 121, ../scss/index.scss */
+/* line 115, ../scss/index.scss */
 .sidebar-nav li a {
   display: block;
   text-decoration: none;
   color: #777;
 }
-/* line 126, ../scss/index.scss */
+/* line 120, ../scss/index.scss */
 .sidebar-nav li.open a .caret {
   border-left-color: transparent;
   border-top-color: #000;
 }
-/* line 130, ../scss/index.scss */
+/* line 124, ../scss/index.scss */
 .sidebar-nav li:before {
   content: '';
   position: absolute;
@@ -177,7 +167,7 @@ html {
   left: 0;
   z-index: -1;
   height: 100%;
-  width: 3px;
+  width: 5px;
   background-color: #1c1c1c;
   -webkit-transition: width .2s ease-in;
   -moz-transition: width .2s ease-in;
@@ -186,56 +176,20 @@ html {
 }
 
 /* Sidebar Styles */
-/* line 150, ../scss/index.scss */
+/* line 144, ../scss/index.scss */
 .sidebar-nav li:first-child a {
   /*color: #1a1a1a;*/
 }
 
-/* line 154, ../scss/index.scss */
-.sidebar-nav > li:nth-child(2):before,
-.sidebar-nav > li:nth-child(2) li:before {
-  background-color: #ec1b5a;
-}
-
-/* line 158, ../scss/index.scss */
-.sidebar-nav > li:nth-child(3):before,
-.sidebar-nav > li:nth-child(3) li:before {
-  background-color: #79aefe;
-}
-
-/* line 162, ../scss/index.scss */
-.sidebar-nav > li:nth-child(4):before,
-.sidebar-nav > li:nth-child(4) li:before {
-  background-color: #314190;
-}
-
-/* line 166, ../scss/index.scss */
-.sidebar-nav > li:nth-child(5):before,
-.sidebar-nav > li:nth-child(5) li:before {
-  background-color: #279636;
-}
-
-/* line 170, ../scss/index.scss */
-.sidebar-nav > li:nth-child(6):before,
-.sidebar-nav > li:nth-child(6) li:before {
-  background-color: #7d5d81;
-}
-
-/* line 174, ../scss/index.scss */
-.sidebar-nav > li:nth-child(7):before,
-.sidebar-nav > li:nth-child(7) li:before {
-  background-color: #ead24c;
-}
-
-/* line 179, ../scss/index.scss */
+/* line 196, ../scss/index.scss */
 .sidebar-nav li.active:before {
   width: 10px;
 }
 
-/* line 183, ../scss/index.scss */
+/* line 200, ../scss/index.scss */
 .sidebar-nav li:hover:before,
 .sidebar-nav li.open:hover:before {
-  width: 5px;
+  width: 10px;
   -webkit-transition: width .2s ease-in;
   -moz-transition: width .2s ease-in;
   -ms-transition: width .2s ease-in;
@@ -243,7 +197,7 @@ html {
   color: #333;
 }
 
-/* line 194, ../scss/index.scss */
+/* line 211, ../scss/index.scss */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
@@ -252,7 +206,7 @@ html {
 }
 
 /* End Sidebar Styles */
-/* line 202, ../scss/index.scss */
+/* line 219, ../scss/index.scss */
 .sidebar-nav li a:hover,
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus,
@@ -264,7 +218,7 @@ html {
   background-color: transparent;
 }
 
-/* line 213, ../scss/index.scss */
+/* line 230, ../scss/index.scss */
 .caret {
   display: inline-block;
   width: 0;
@@ -280,33 +234,33 @@ html {
 }
 
 @media (min-width: 768px) {
-  /* line 229, ../scss/index.scss */
+  /* line 246, ../scss/index.scss */
   #wrapper {
     padding-left: 250px;
   }
-  /* line 231, ../scss/index.scss */
+  /* line 248, ../scss/index.scss */
   #wrapper.toggled {
     padding-left: 0;
   }
-  /* line 233, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
   }
-  /* line 236, ../scss/index.scss */
+  /* line 253, ../scss/index.scss */
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
     padding-left: 250px;
   }
-  /* line 244, ../scss/index.scss */
+  /* line 261, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper {
     width: 50px;
   }
-  /* line 246, ../scss/index.scss */
+  /* line 263, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper:hover {
     width: 250px;
   }
-  /* line 250, ../scss/index.scss */
+  /* line 267, ../scss/index.scss */
   #wrapper.toggled-2 #page-content-wrapper {
     position: relative;
     margin-right: 0;
@@ -318,17 +272,17 @@ html {
     width: auto;
   }
 
-  /* line 262, ../scss/index.scss */
+  /* line 279, ../scss/index.scss */
   .fixed-brand {
     width: 250px;
   }
 
-  /* line 266, ../scss/index.scss */
+  /* line 283, ../scss/index.scss */
   #sidebar-wrapper {
     width: 250px;
   }
 
-  /* line 269, ../scss/index.scss */
+  /* line 286, ../scss/index.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
@@ -338,7 +292,7 @@ html {
     transition: all 0.5s ease;
   }
 
-  /* line 277, ../scss/index.scss */
+  /* line 294, ../scss/index.scss */
   .hamburger.navbar-toggle {
     display: none;
   }
@@ -346,12 +300,12 @@ html {
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
-/* line 287, ../scss/index.scss */
+/* line 304, ../scss/index.scss */
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent;
 }
 
-/* line 291, ../scss/index.scss */
+/* line 308, ../scss/index.scss */
 .hamburger {
   position: relative;
   top: 10px;
@@ -363,15 +317,15 @@ html {
   background: transparent;
   border: none;
 }
-/* line 301, ../scss/index.scss */
+/* line 318, ../scss/index.scss */
 .hamburger.navbar-toggle {
   top: 0;
 }
-/* line 304, ../scss/index.scss */
+/* line 321, ../scss/index.scss */
 .hamburger:hover, .hamburger:focus, .hamburger:active {
   outline: none;
 }
-/* line 307, ../scss/index.scss */
+/* line 324, ../scss/index.scss */
 .hamburger.is-closed:before {
   content: '';
   display: block;
@@ -384,7 +338,7 @@ html {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: all .35s ease-in-out;
 }
-/* line 319, ../scss/index.scss */
+/* line 336, ../scss/index.scss */
 .hamburger.is-closed:hover:before {
   opacity: 1;
   display: block;
@@ -392,7 +346,7 @@ html {
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 327, ../scss/index.scss */
+/* line 344, ../scss/index.scss */
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom,
@@ -405,75 +359,75 @@ html {
   width: 100%;
 }
 
-/* line 338, ../scss/index.scss */
+/* line 355, ../scss/index.scss */
 .hamburger.is-closed .hamb-top,
 .hamburger.is-closed .hamb-middle,
 .hamburger.is-closed .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 343, ../scss/index.scss */
+/* line 360, ../scss/index.scss */
 .hamburger.is-closed .hamb-top {
   top: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 347, ../scss/index.scss */
+/* line 364, ../scss/index.scss */
 .hamburger.is-closed .hamb-middle {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 351, ../scss/index.scss */
+/* line 368, ../scss/index.scss */
 .hamburger.is-closed .hamb-bottom {
   bottom: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 356, ../scss/index.scss */
+/* line 373, ../scss/index.scss */
 .hamburger.is-closed:hover .hamb-top {
   top: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 360, ../scss/index.scss */
+/* line 377, ../scss/index.scss */
 .hamburger.is-closed:hover .hamb-bottom {
   bottom: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 364, ../scss/index.scss */
+/* line 381, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-middle,
 .hamburger.is-open .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 369, ../scss/index.scss */
+/* line 386, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-bottom {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 374, ../scss/index.scss */
+/* line 391, ../scss/index.scss */
 .hamburger.is-open .hamb-top {
   -webkit-transform: rotate(45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 378, ../scss/index.scss */
+/* line 395, ../scss/index.scss */
 .hamburger.is-open .hamb-middle {
   display: none;
 }
 
-/* line 379, ../scss/index.scss */
+/* line 396, ../scss/index.scss */
 .hamburger.is-open .hamb-bottom {
   -webkit-transform: rotate(-45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 383, ../scss/index.scss */
+/* line 400, ../scss/index.scss */
 .hamburger.is-open:before {
   content: '';
   display: block;
@@ -487,7 +441,7 @@ html {
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 395, ../scss/index.scss */
+/* line 412, ../scss/index.scss */
 .hamburger.is-open:hover:before {
   opacity: 1;
   display: block;
@@ -498,7 +452,7 @@ html {
 /*-------------------------------*/
 /*            Overlay            */
 /*-------------------------------*/
-/* line 406, ../scss/index.scss */
+/* line 423, ../scss/index.scss */
 .overlay {
   position: fixed;
   display: none;

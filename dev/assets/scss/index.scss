@@ -23,12 +23,6 @@
 .bg-color-yellow{
 	background-color: #ead24c;
 }
-.bg-color-{
-	background-color: #2d2366;
-}
-.bg-color-{
-	background-color: #35acdf;
-}
 
 
  body {
@@ -151,30 +145,53 @@
     /*color: #1a1a1a;*/
     //background-color: #1a1a1a;
 }
-.sidebar-nav > li:nth-child(2):before,
-.sidebar-nav > li:nth-child(2) li:before {
-    background-color: #ec1b5a;   
+.sidebar-nav li{
+    &.black:before {
+        @extend .bg-color-black;
+    }
+    &.red:before {
+        @extend .bg-color-red;
+    }
+    &.lblue:before {
+        @extend .bg-color-lblue;
+    }
+    &.blue:before {
+        @extend .bg-color-blue;
+    }
+    &.green:before {
+        @extend .bg-color-green;
+    }
+    &.purple:before {
+        @extend .bg-color-purple;
+    }
+    &.yellow:before {
+        @extend .bg-color-yellow;
+    }
 }
-.sidebar-nav > li:nth-child(3):before,
-.sidebar-nav > li:nth-child(3) li:before {
-    background-color: #79aefe;   
-}
-.sidebar-nav > li:nth-child(4):before,
-.sidebar-nav > li:nth-child(4) li:before {
-    background-color: #314190;   
-}
-.sidebar-nav > li:nth-child(5):before,
-.sidebar-nav > li:nth-child(5) li:before {
-    background-color: #279636;   
-}
-.sidebar-nav > li:nth-child(6):before,
-.sidebar-nav > li:nth-child(6) li:before {
-    background-color: #7d5d81;   
-}
-.sidebar-nav > li:nth-child(7):before,
-.sidebar-nav > li:nth-child(7) li:before {
-    background-color: #ead24c;   
-}
+// .sidebar-nav > li:nth-child(2):before,
+// .sidebar-nav > li:nth-child(2) li:before {
+//     background-color: #ec1b5a;   
+// }
+// .sidebar-nav > li:nth-child(3):before,
+// .sidebar-nav > li:nth-child(3) li:before {
+//     background-color: #79aefe;   
+// }
+// .sidebar-nav > li:nth-child(4):before,
+// .sidebar-nav > li:nth-child(4) li:before {
+//     background-color: #314190;   
+// }
+// .sidebar-nav > li:nth-child(5):before,
+// .sidebar-nav > li:nth-child(5) li:before {
+//     background-color: #279636;   
+// }
+// .sidebar-nav > li:nth-child(6):before,
+// .sidebar-nav > li:nth-child(6) li:before {
+//     background-color: #7d5d81;   
+// }
+// .sidebar-nav > li:nth-child(7):before,
+// .sidebar-nav > li:nth-child(7) li:before {
+//     background-color: #ead24c;   
+// }
 
 .sidebar-nav li.active:before {
     width: $sidebar-before-width-active;    
