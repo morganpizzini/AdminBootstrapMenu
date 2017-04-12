@@ -3,13 +3,13 @@ var LayoutSingleton = (function () {
     function init() {
         // singleton here
         var trigger = $('.hamburger'),
-            overlay = $('.overlay');
+            overlay = $('.overlay'),
+            $wrapper = $('#wrapper');
       function initMenu() {
         $('#menu ul').hide();
         $('#menu ul').children('.current').parent().show();
         //$('#menu ul:first').show();
-        $('#menu li a').click(
-          function() {
+        $wrapper.on("click",'#menu li a',function() {
             var $element = $(this);
             var $elementNode = $element.closest("li");
             var $checkElement = $element.next();
@@ -30,7 +30,7 @@ var LayoutSingleton = (function () {
           );
         }
         function initHmaburgerButton(){
-          $("#menu-toggle").click(function(e) {
+          $("body").on("click","#menu-toggle",function(e) {
               e.preventDefault();
               $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
               $('#menu ul').hide();
@@ -43,7 +43,7 @@ var LayoutSingleton = (function () {
                 overlay.hide();
               }
           });
-          $("#menu-toggle-2").click(function(e) {
+          $("body").on("click","#menu-toggle-2",function(e) {
               e.preventDefault();
               $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
               $('#menu ul').hide();
@@ -62,7 +62,7 @@ var LayoutSingleton = (function () {
                initMenu();
                initHmaburgerButton();
                //hide and reset menu if showed by mouse hover
-              $("#sidebar-wrapper").mouseleave(function() {
+              $("body").on("mouseleave","#sidebar-wrapper",function() {
                 if(!$("#wrapper").hasClass("toggled-2"))
                   return;
                 if($("#wrapper").hasClass("toggled"))
@@ -72,7 +72,7 @@ var LayoutSingleton = (function () {
                 $('#menu li.open').removeClass('open');
               });
 
-              $(".menu-overlay").click(function(){
+              $("body").on("click",".menu-overlay",function(){
                 $("#menu-toggle").trigger("click");
               });
             }
