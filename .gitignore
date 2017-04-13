@@ -221,3 +221,8 @@ pip-log.txt
 
 node_modules/
 cache/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
