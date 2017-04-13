@@ -198,6 +198,11 @@ html {
 }
 
 /* line 211, ../scss/index.scss */
+.nav-pills > li > ul {
+  display: none;
+}
+
+/* line 213, ../scss/index.scss */
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,
 .nav-pills > li.active > a:hover {
@@ -206,7 +211,7 @@ html {
 }
 
 /* End Sidebar Styles */
-/* line 219, ../scss/index.scss */
+/* line 221, ../scss/index.scss */
 .sidebar-nav li a:hover,
 .sidebar-nav li a:active,
 .sidebar-nav li a:focus,
@@ -218,7 +223,7 @@ html {
   background-color: transparent;
 }
 
-/* line 230, ../scss/index.scss */
+/* line 232, ../scss/index.scss */
 .caret {
   display: inline-block;
   width: 0;
@@ -234,33 +239,33 @@ html {
 }
 
 @media (min-width: 768px) {
-  /* line 246, ../scss/index.scss */
+  /* line 248, ../scss/index.scss */
   #wrapper {
     padding-left: 250px;
   }
-  /* line 248, ../scss/index.scss */
+  /* line 250, ../scss/index.scss */
   #wrapper.toggled {
     padding-left: 0;
   }
-  /* line 250, ../scss/index.scss */
+  /* line 252, ../scss/index.scss */
   #wrapper.toggled #sidebar-wrapper {
     width: 250px;
   }
-  /* line 253, ../scss/index.scss */
+  /* line 255, ../scss/index.scss */
   #wrapper.toggled #page-content-wrapper {
     position: relative;
     margin-right: 0;
     padding-left: 250px;
   }
-  /* line 261, ../scss/index.scss */
+  /* line 263, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper {
     width: 50px;
   }
-  /* line 263, ../scss/index.scss */
+  /* line 265, ../scss/index.scss */
   #wrapper.toggled-2 #sidebar-wrapper:hover {
     width: 250px;
   }
-  /* line 267, ../scss/index.scss */
+  /* line 269, ../scss/index.scss */
   #wrapper.toggled-2 #page-content-wrapper {
     position: relative;
     margin-right: 0;
@@ -272,17 +277,17 @@ html {
     width: auto;
   }
 
-  /* line 279, ../scss/index.scss */
+  /* line 281, ../scss/index.scss */
   .fixed-brand {
     width: 250px;
   }
 
-  /* line 283, ../scss/index.scss */
+  /* line 285, ../scss/index.scss */
   #sidebar-wrapper {
     width: 250px;
   }
 
-  /* line 286, ../scss/index.scss */
+  /* line 288, ../scss/index.scss */
   #page-content-wrapper {
     padding: 20px;
     position: relative;
@@ -292,7 +297,7 @@ html {
     transition: all 0.5s ease;
   }
 
-  /* line 294, ../scss/index.scss */
+  /* line 296, ../scss/index.scss */
   .hamburger.navbar-toggle {
     display: none;
   }
@@ -300,12 +305,12 @@ html {
 /*-------------------------------*/
 /*       Hamburger-Cross         */
 /*-------------------------------*/
-/* line 304, ../scss/index.scss */
+/* line 306, ../scss/index.scss */
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
   background-color: transparent;
 }
 
-/* line 308, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .hamburger {
   position: relative;
   top: 10px;
@@ -317,16 +322,16 @@ html {
   background: transparent;
   border: none;
 }
-/* line 318, ../scss/index.scss */
+/* line 320, ../scss/index.scss */
 .hamburger.navbar-toggle {
   top: 0;
 }
-/* line 321, ../scss/index.scss */
+/* line 323, ../scss/index.scss */
 .hamburger:hover, .hamburger:focus, .hamburger:active {
   outline: none;
 }
-/* line 324, ../scss/index.scss */
-.hamburger.is-closed:before {
+/* line 326, ../scss/index.scss */
+.hamburger:before {
   content: '';
   display: block;
   width: 100px;
@@ -338,96 +343,87 @@ html {
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-transition: all .35s ease-in-out;
 }
-/* line 336, ../scss/index.scss */
-.hamburger.is-closed:hover:before {
+/* line 338, ../scss/index.scss */
+.hamburger:hover:before {
   opacity: 1;
   display: block;
   -webkit-transform: translate3d(-100px, 0, 0);
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 344, ../scss/index.scss */
-.hamburger.is-closed .hamb-top,
-.hamburger.is-closed .hamb-middle,
-.hamburger.is-closed .hamb-bottom,
-.hamburger.is-open .hamb-top,
-.hamburger.is-open .hamb-middle,
-.hamburger.is-open .hamb-bottom {
+/* line 346, ../scss/index.scss */
+.hamburger .hamb-top,
+.hamburger .hamb-middle,
+.hamburger .hamb-bottom {
   position: absolute;
   left: 0;
   height: 4px;
   width: 100%;
-}
-
-/* line 355, ../scss/index.scss */
-.hamburger.is-closed .hamb-top,
-.hamburger.is-closed .hamb-middle,
-.hamburger.is-closed .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 360, ../scss/index.scss */
-.hamburger.is-closed .hamb-top {
+/* line 356, ../scss/index.scss */
+.hamburger .hamb-top {
   top: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 364, ../scss/index.scss */
-.hamburger.is-closed .hamb-middle {
+/* line 360, ../scss/index.scss */
+.hamburger .hamb-middle {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 368, ../scss/index.scss */
-.hamburger.is-closed .hamb-bottom {
+/* line 364, ../scss/index.scss */
+.hamburger:not(.is-open) .hamb-bottom {
   bottom: 5px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 373, ../scss/index.scss */
-.hamburger.is-closed:hover .hamb-top {
+/* line 369, ../scss/index.scss */
+.hamburger:not(.is-open):hover .hamb-top {
   top: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 377, ../scss/index.scss */
-.hamburger.is-closed:hover .hamb-bottom {
+/* line 373, ../scss/index.scss */
+.hamburger:not(.is-open):hover .hamb-bottom {
   bottom: 3px;
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 381, ../scss/index.scss */
+/* line 377, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-middle,
 .hamburger.is-open .hamb-bottom {
   background-color: #1a1a1a;
 }
 
-/* line 386, ../scss/index.scss */
+/* line 382, ../scss/index.scss */
 .hamburger.is-open .hamb-top,
 .hamburger.is-open .hamb-bottom {
   top: 50%;
   margin-top: -2px;
 }
 
-/* line 391, ../scss/index.scss */
+/* line 387, ../scss/index.scss */
 .hamburger.is-open .hamb-top {
   -webkit-transform: rotate(45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 395, ../scss/index.scss */
+/* line 391, ../scss/index.scss */
 .hamburger.is-open .hamb-middle {
   display: none;
 }
 
-/* line 396, ../scss/index.scss */
+/* line 392, ../scss/index.scss */
 .hamburger.is-open .hamb-bottom {
   -webkit-transform: rotate(-45deg);
   -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.73, 1, 0.28, 0.08);
 }
 
-/* line 400, ../scss/index.scss */
+/* line 396, ../scss/index.scss */
 .hamburger.is-open:before {
   content: '';
   display: block;
@@ -441,7 +437,7 @@ html {
   -webkit-transition: all .35s ease-in-out;
 }
 
-/* line 412, ../scss/index.scss */
+/* line 408, ../scss/index.scss */
 .hamburger.is-open:hover:before {
   opacity: 1;
   display: block;
@@ -452,7 +448,7 @@ html {
 /*-------------------------------*/
 /*            Overlay            */
 /*-------------------------------*/
-/* line 423, ../scss/index.scss */
+/* line 419, ../scss/index.scss */
 .overlay {
   position: fixed;
   display: none;
