@@ -2,11 +2,11 @@ var LayoutSingleton = (function () {
     var instantiated;
     function init() {
         // singleton here
-        var trigger = $('.hamburger'),
-            overlay = $('.overlay'),
-            $wrapper = $('#wrapper');
+        // var trigger = $('.hamburger'),
+        //     overlay = $('.overlay'),
+        //     $wrapper = $('#wrapper');
       function initMenu() {
-        $wrapper.on("click",'#menu li a',function() {
+        $("body").on("click",'#menu li a',function() {
             var $element = $(this);
             var $elementNode = $element.closest("li");
             var $checkElement = $element.next();
