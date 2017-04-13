@@ -6,9 +6,6 @@ var LayoutSingleton = (function () {
             overlay = $('.overlay'),
             $wrapper = $('#wrapper');
       function initMenu() {
-        $('#menu ul').hide();
-        $('#menu ul').children('.current').parent().show();
-        //$('#menu ul:first').show();
         $wrapper.on("click",'#menu li a',function() {
             var $element = $(this);
             var $elementNode = $element.closest("li");
@@ -33,9 +30,8 @@ var LayoutSingleton = (function () {
           $("body").on("click","#menu-toggle",function(e) {
               e.preventDefault();
               $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
-              $('#menu ul').hide();
               $("#menu-toggle-2").toggleClass('is-open');
-              $("#menu-toggle-2").toggleClass('is-closed');
+              $("#menu-toggle").toggleClass('is-open');
               if($("#wrapper").hasClass("toggled")){
                 overlay.show();
               }else{
@@ -46,9 +42,8 @@ var LayoutSingleton = (function () {
           $("body").on("click","#menu-toggle-2",function(e) {
               e.preventDefault();
               $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
-              $('#menu ul').hide();
               $("#menu-toggle-2").toggleClass('is-open');
-              $("#menu-toggle-2").toggleClass('is-closed');
+              $("#menu-toggle").toggleClass('is-open');
               if(!$("#wrapper").hasClass("toggled-2")){
                 overlay.show();
               }else{
@@ -67,7 +62,6 @@ var LayoutSingleton = (function () {
                   return;
                 if($("#wrapper").hasClass("toggled"))
                   return;
-                //$('#menu ul').hide();
                 $('#menu ul:visible').slideUp('normal');
                 $('#menu li.open').removeClass('open');
               });
