@@ -3,7 +3,7 @@ var LayoutSingleton = (function () {
     function init() {
         // singleton here
         // var trigger = $('.hamburger'),
-        //     overlay = $('.overlay'),
+        //     overlay = $('.overlay'), 
         //     $wrapper = $('#wrapper');
       function initMenu() {
         $("body").on("click",'#menu li a',function() {
