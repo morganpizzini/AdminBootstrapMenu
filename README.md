@@ -5,6 +5,8 @@
 _Admin Bootstrap Menu_ is a just "another" bootstrap admin boilerplate menu..
 While i was looking for some useful menu for an admin website i decide to merge some code snippets and repos.
 
+<b>Demo</b> : [Online demo](https://morganpizzini.github.io/AdminBootstrapMenu/)
+
 It comes with
 * jQuery
 * bootstrap
