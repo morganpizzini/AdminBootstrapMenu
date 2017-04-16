@@ -1,0 +1,60 @@
+@import "_variables";
+
+.banner {
+    background: $body-bg-color;
+    // color: #000;
+    border-bottom: solid 1px black;
+    box-shadow:0 -1px 5px #555;
+    position:fixed;
+    bottom: 0;
+    left: 0;
+
+    height: 57px;
+    width: 100%;
+    z-index: 10;
+
+    text-align: center;
+    padding-top: inherit;
+    height: 43px;
+
+    display: none;
+    a {
+        margin: 0 20px;
+    }
+    &.active {
+        color: white;
+        font-weight: bolder;
+    }
+    nav {
+        display: inline-block;
+        margin-right: 3px;
+        padding: 4px;
+    }
+}
+    .banner nav a, .banner nav input {
+        display: inline-block;
+        padding: 6px 6px 6px;
+        color: $body-color;
+        text-decoration: none;
+    }
+     .banner nav a img {
+        height: 23px;
+        vertical-align: top;
+    }
+
+
+    .banner nav a:hover {
+        color: $body-bg-color;
+        background: $body-color;
+        text-decoration: none;
+        //border-bottom: solid 4px silver;
+        //border-radius: 2px;
+    }
+
+    .banner nav a.active, .banner nav a.selected
+     {
+        color: white;
+        font-weight: bold;
+        border-bottom: solid 4px orange;
+        border-radius: 2px;
+    }

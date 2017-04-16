@@ -1,10 +1,14 @@
+import '../css/app.scss';
+import '../index.html';
+import $ from "jquery";
+import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
+import 'waypoints';
+import 'scrollTo';
+
 var LayoutSingleton = (function () {
     var instantiated;
     function init() {
         // singleton here
-        // var trigger = $('.hamburger'),
-        //     overlay = $('.overlay'), 
-        //     $wrapper = $('#wrapper');
       function initMenu() {
         $("body").on("click",'#menu li a',function() {
             var $element = $(this);
@@ -26,48 +30,60 @@ var LayoutSingleton = (function () {
             }
           );
         }
+        function toggleMenu($toggledClass){
+          $("#wrapper").toggleClass("toggled");
+          $(".hamburger").toggleClass('is-open');
+          $('#menu ul:visible').slideUp('normal');
+          //$("#menu-toggle").toggleClass('is-open');
+          if(!$("#wrapper").hasClass("toggled")){
+            $(".overlay").show();
+          }else{
+            $('#menu li.open').removeClass('open');
+            $(".overlay").hide();
+          }
+        }
         function initHmaburgerButton(){
-          $("body").on("click","#menu-toggle",function(e) {
+          $("body").on("click",".hamburger",function(e) {
               e.preventDefault();
-              $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
-              $("#menu-toggle-2").toggleClass('is-open');
-              $("#menu-toggle").toggleClass('is-open');
-              if($("#wrapper").hasClass("toggled")){
-                overlay.show();
-              }else{
-                $('#menu li.open').removeClass('open');
-                overlay.hide();
-              }
+              toggleMenu();
           });
-          $("body").on("click","#menu-toggle-2",function(e) {
-              e.preventDefault();
-              $("#wrapper").toggleClass("toggled-2").toggleClass("toggled");
-              $("#menu-toggle-2").toggleClass('is-open');
-              $("#menu-toggle").toggleClass('is-open');
-              if(!$("#wrapper").hasClass("toggled-2")){
-                overlay.show();
-              }else{
-                $('#menu li.open').removeClass('open');
-                overlay.hide();
-              }
+        }
+        function initTranslationFunction(){
+          //function like #href
+          $('[id^=scrollTo]').click(function() {
+              var id = $(this).attr('id').slice(9);
+              $(window).scrollTo($('#' + id), 1000, { offset: { top: -51, left: 0 } });
+          });
+          //bouncing circle on scroll
+          $('#marketing').waypoint(function() {
+              $('.img-circle').addClass('animated zoomIn');
+          }, {
+              offset: '50%',
+              triggerOnce: true
+          });
+          //bouncing square on scroll
+          $('.featurette').waypoint(function() {
+              $('#' + this.element.id + ' .featurette-image').addClass('animated pulse');
+          }, {
+              offset: '50%',
+              triggerOnce: true
           });
         }
         return {
             init: function init() {
                initMenu();
                initHmaburgerButton();
+               initTranslationFunction();
                //hide and reset menu if showed by mouse hover
               $("body").on("mouseleave","#sidebar-wrapper",function() {
-                if(!$("#wrapper").hasClass("toggled-2"))
-                  return;
-                if($("#wrapper").hasClass("toggled"))
+                if(!$("#wrapper").hasClass("toggled"))
                   return;
                 $('#menu ul:visible').slideUp('normal');
                 $('#menu li.open').removeClass('open');
               });
 
               $("body").on("click",".menu-overlay",function(){
-                $("#menu-toggle").trigger("click");
+                toggleMenu();
               });
             }
         };
