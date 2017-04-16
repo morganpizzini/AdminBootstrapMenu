@@ -22,9 +22,6 @@
   "author": "Morgan Pizzini",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "3.3.7",
-    "font-awesome": "4.7.0",
-    "jquery": "3.2.1"
   },
   "devDependencies": {
      "animate.css": "git+https://github.com/daneden/animate.css.git",
